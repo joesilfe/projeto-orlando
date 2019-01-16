@@ -1,0 +1,487 @@
+/*Fontes*/
+
+@font-face{
+	font-family: 'OpenSans';
+	src: url("../fonts/Open_Sans/OpenSans-Regular.ttf");
+	font-size: 1em;
+}
+
+@font-face{
+	font-family: 'OpenSans-Light';
+	src: url("../fonts/Open_Sans/OpenSans-Light.ttf");
+	font-size: 1em;
+}
+
+
+/*Lista de Clubes*/
+header{
+	width: 100%;
+	height: 150px;
+	background: rgba(94, 41, 154, .8);
+	z-index: 2;
+	position: relative;
+}
+
+header .container{
+	position: relative;
+}
+header .header-black{
+	background-color: #000;
+	height: 40px;
+}
+
+header .header-black li{
+	display: inline-block;
+	background-image: url("../img/clubs.png");
+	background-repeat: no-repeat;
+	margin: 4px;
+}
+
+header .header-black li.club-02{
+	background-position: -48px 0px;
+}
+header .header-black li.club-03{
+	background-position: -96px 0px;
+}
+header .header-black li.club-04{
+	background-position: -139px 0px;
+}
+header .header-black li.club-05{
+	background-position: -189px 0px;
+}
+header .header-black li.club-06{
+	background-position: -239px 0px;
+}
+header .header-black li.club-07{
+	background-position: -288px 0px;
+}
+header .header-black li.club-08{
+	background-position: -336px 0px;
+}
+header .header-black li.club-09{
+	background-position: -379px 0px;
+}
+header .header-black li.club-10{
+	background-position: -429px 0px;
+}
+header .header-black li.club-11{
+	background-position: -480px 0px;
+}
+header .header-black li.club-12{
+	background-position: -528px 0px;
+}
+header .header-black li.club-13{
+	background-position: -578px 0px;
+}
+header .header-black li.club-14{
+	background-position: -629px 0px;
+}
+header .header-black li.club-15{
+	background-position: -674px 0px;
+}
+header .header-black li.club-16{
+	background-position: -718px 0px;
+}
+header .header-black li.club-17{
+	background-position: -761px 0px;
+}
+header .header-black li.club-18{
+	background-position: -806px 0px;
+}
+header .header-black li.club-19{
+	background-position: -855px 0px;
+}
+header .header-black li.club-20{
+	background-position: -901px 0px;
+}
+header .header-black li.club-21{
+	background-position: -948px 0px;
+}
+header .header-black li.club-22{
+	background-position: -996px 0px;
+}
+
+header .header-black li a{
+	display: block;
+	width: 32px;
+	height: 32px;
+}
+
+/*Logo Orlando City*/
+header #logotipo{
+	z-index: 3;
+	position: absolute;
+	top: 20px;
+}
+
+/*Menu de navegação*/
+#menu{
+	margin: 12px 0;
+}
+
+
+#menu li{
+	display: inline-block;
+	font-family: "OpenSans";	
+}
+
+#menu li a{
+	color: #fff;
+	font-size: 16px;
+	padding: 10px 25px;
+	font-weight: bold;	
+}
+
+/*Input Search*/
+#menu li.search{
+	width: 182px;
+}
+
+#menu li.search {
+	width: 182px;
+	transition-timing-function: cubic-bezier(1, -.91, .91, 1);
+	transition-duration: 1s;
+}
+
+#menu li.search.ativo{
+	width: 300px;
+}
+
+#menu li.search input{
+	background-color:#5c2d90 ;
+	color:#fff;
+	border: none;
+	height: 30px;
+	line-height: 30px;
+}
+
+#menu li.search.ativo input{
+	width: 300px;
+}
+
+#menu li.search ::-webkit-input-placeholder{
+	color: #fff;
+}
+
+#menu li.search button{
+	background: none; 
+	border: none;
+	position: absolute;
+	right: 3px;
+	top: 8px;
+}
+
+#menu li.search button i{
+	font-size: 14px;
+	color: rgba(255, 255, 255, .5);
+}
+
+.input-group{
+	top:8px;
+}
+
+/*Banner*/
+#banner{
+	width: 100%;
+	height: 782px;
+	position: relative;
+	top: -130px;
+	background: url("../img/banner.jpg") no-repeat;
+	background-size: cover;
+	background-position: 0px -110px;
+}
+
+
+#banner h1{
+	transition-duration: 2s;
+	position: relative;
+	top: 300px;
+	color: #fff;
+	font-size: 92px;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, .45);
+	font-family: "OpenSans-Light";
+	margin-left: 50px;
+}
+
+#banner h1.efeito{
+	color: red;
+	font-size: 12em;
+}
+
+#banner h1 small{
+	font-size: 32px;
+	display: block;
+	color: #fff;
+	font-family: "OpenSans";
+	font-weight: bold;
+}
+
+/*NEWS*/
+#news h2{
+	color: #5e2799;
+	font-family: "OpenSans-Light";
+	font-size: 48px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+#news{
+	position: relative;
+	top: -110px;
+}
+
+#news hr{
+	border:#FDE192 solid 4px;
+	width: 200px;
+	margin: 0 auto;
+}
+
+#news .thumbnails{
+	margin-top: 20px;
+}
+
+
+/*Configurando CSS do carrousel*/
+/*inicio*/
+#news .thumbnails .item-inner{
+	padding: 10px;
+}
+
+#news .thumbnails .item-inner img{
+	width: 100;
+}
+/*fim*/
+
+#news .thumbnails h3{
+	color:#5e299a;
+	font-size:18px;
+	font-family: "OpenSans";
+	font-weight: bold;
+	margin-bottom: 0;
+}
+
+#news .thumbnails time{
+	color: #a7a7a7;
+	font-size:18px;
+	font-family: "OpenSans";
+}
+
+/*Estatisticas*/
+#estatisticas{
+	background-color: #5E299A;
+	width: 100%;
+	height: 200px;
+	text-align: center;
+}
+
+#estatisticas p{
+	color: #FDE092;
+	text-transform: uppercase;
+	font-family: "OpenSans-Light";
+	font-size: 64px;
+	margin-top: 36px;
+}
+
+#estatisticas p small{
+	display: block;
+	color: #fff;
+	font-size: 24px;
+}
+
+#call-to-action{
+	text-align: center;
+	margin-top: 105px;
+}
+
+#call-to-action h2{
+	color: #5e2799;
+	font-family: "OpenSans-Light";
+	font-size: 48px;
+	/*text-transform: uppercase;*/
+	text-align: center;
+}
+
+#call-to-action hr{
+	border:#FDE192 solid 4px;
+	width: 200px;
+	margin: 0 auto;
+}
+
+#call-to-action p{
+	margin-top: 60px;
+	margin-bottom: 40px;
+	font-family: "OpenSans";
+	font-size: 14px;
+	color: #656565;
+}
+
+#call-to-action .btn{
+	min-width: 164px;
+    height: 44px;
+    line-height: 34px;
+    border-radius: 0;
+}
+
+#call-to-action .btn-roxo {
+    color: #fff;
+    background-color: #5E299A;
+    border-color: #5E299A;    
+}
+
+#call-to-action .btn-amarelo {
+    color: #000;
+    background-color: #fde192;
+    border-color: #fde192;
+}
+
+#call-to-action .row-max-400{
+	margin: 0 auto;
+	max-width: 400px;
+}
+
+/*Footer*/
+
+footer{
+	margin-top: 110px;
+
+}
+
+footer .row{
+	width: 100%;
+	margin:0;
+}
+
+footer .row p{
+	line-height: 55px;
+	margin-bottom: 0;
+}
+
+footer .row-cinza-claro{
+	height: 240px;
+	background-color: #171f26;
+}	
+
+footer .row-cinza-escuro{
+	height: 60px;
+	background-color: #11171d;
+	border-top: 1px solid #242d37;
+}
+
+footer .pull-left{
+	color: #666;
+	font-family: "OpenSans";
+	font-size: 14px;
+}
+
+footer .text-roxo{
+	color: #623291;
+	font-family: "OpenSans";
+	font-weight: bold;
+	font-size: 14px;
+}
+
+footer .logotipo{
+	margin-top: 28px;
+}
+
+footer .col-popular-post, .col-links, .col-get-in-touch{
+	margin-top: 40px;
+}
+
+footer .row-cols h4{
+	color: #fff;
+	font-family: "OpenSans";
+	font-size: 16px;
+	padding-bottom: 17px;
+	border-bottom: 1px solid #242d37; 
+}
+
+footer .row-cols h5{
+	color: #666;
+	font-family: Arial;
+	font-size: 14px;
+	margin-bottom: 0;
+}
+
+footer .row-cols time{
+	color: #fde092;
+	font-family: Arial;
+	font-size: 14px;
+}
+
+footer .col-links a{
+	color:#FFF;
+	font-family: Arial;
+	font-size: 14px;
+}
+
+footer .col-get-in-touch address{
+	color: #666;
+	font-family: Arial;
+	font-size: 14px;
+	margin-bottom: 0px;
+}
+
+footer .col-get-in-touch address span{ 
+	display: inline-block;
+}
+
+footer .col-get-in-touch address i{ 
+	position: relative;
+	top:-14px;
+}
+
+footer .col-get-in-touch i{
+	color: #9b9b9b;
+	font-size: 20px;
+	margin: 0 6px;
+}
+
+footer .col-get-in-touch a{
+	color: #666;
+}
+
+
+footer .col-get-in-touch p{
+	padding-top: 0px;
+}
+
+footer .list-socials li{
+	display: inline-block;
+}
+
+
+footer .list-socials i{
+	font-size: 21px;
+}
+
+video{
+	width: 60%;
+}
+
+/*Configurando css do Plyr*/
+
+.plyr--video .plyr__control.plyr__tab-focus, .plyr--video .plyr__control:hover, .plyr--video .plyr__control[aria-expanded=true] {
+    background: #7e53ae;
+}
+
+.plyr__control.plyr__tab-focus {
+    box-shadow: 0 0 0 5px rgba(126, 83, 174, .6);
+}
+
+.plyr__control--overlaid {
+    background: rgb(126, 83, 174);
+    border: 2px solid #fff;
+}
+
+.plyr__control--overlaid:focus, .plyr__control--overlaid:hover {
+    background: #7e53ae;
+}
+
+.plyr--full-ui input[type=range] {
+    color: #7e53ae;
+}
+
+#btn-bars, #btn-search, #btn-news-prev, #btn-news-next{
+	display: none;
+}
