@@ -46,6 +46,13 @@ $app->get(
     }
 );
 
+$app->get(
+    '/shop',
+    function () {
+        require_once("view/shop.php");
+    }
+);
+
 // POST route
 $app->post(
     '/post',
