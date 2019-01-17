@@ -4,7 +4,7 @@
 	
 		<div class="container" id="destaque-produtos-container">
 
-			<div id="destaque-produtos">
+			<div id="destaque-produtos" class="">
 			
 				<div class="item">
 					
@@ -27,7 +27,7 @@
 					
 					</div>					
 
-				</div>
+				</div>				
 			
 			</div>
 
