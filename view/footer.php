@@ -72,6 +72,7 @@
 		<script type="text/javascript" src="lib/jquery/jquery-3.3.1.min.js"></script>
 		<script type="text/javascript" src="lib/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
 		<script type="text/javascript" src="lib/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="lib/raty/lib/jquery.raty.js"></script>		
 		<script type="text/javascript" src="js/efeitos.js"></script>
 	</body>
 </html>

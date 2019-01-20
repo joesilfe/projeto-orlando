@@ -5,16 +5,17 @@
 		<meta name="author" content="Joel Silva">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Orlando City</title>
-		<link rel="stylesheet" type="text/css" href="lib/bootstrap-3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="lib/bootstrap-3.3.7/css/bootstrap.min.css">		
 		<link rel="stylesheet" tyle="text/css" href="lib/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
 		<link rel="stylesheet" tyle="text/css" href="lib/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+		<link rel="stylesheet" type="text/css" href="lib/raty/lib/jquery.raty.css"">
 		<link rel="stylesheet" type="text/css" href="css/orlando.css">
 		<link rel="stylesheet" type="text/css" href="css/orlando-mobile.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 	</head>
 	<body>
 		<header class="open-menu">
-				
+			<!-- menu mobile -->
 			<div class="hidden-sm hidden-md hidden-lg">
 				<div id="menu-mobile-mask"></div>
 
@@ -23,7 +24,7 @@
 						<button type="button" class="btn btn-close"><i class="fas fa-chevron-left"></i></button>
 					</div>
 					<ul class="list-unstyled">
-						<li><a href="index">Home</a></li>
+						<li><a href="/">Home</a></li>
 						<li><a href="videos">Vídeos</a></li>
 						<li><a href="">Tickets</a></li>
 						<li><a href="">TNews</a></li>
@@ -31,7 +32,7 @@
 					</ul>								
 				</div>
 			</div>			
-
+			<!-- fim - menu mobile -->
 			<div class="container">
 				<img id="logotipo" src="img/orlando-logo.png" alt="orlando-logo">
 			</div>
@@ -39,7 +40,7 @@
 			<div class="header-black">				
 				<div class="container">
 					
-					<input type="search" id="input-search-mobile" class="visible-sx" placeholder="search...">
+					<input type="search" id="input-search-mobile" class="hidden-sm hidden-md hidden-lg" placeholder="search...">
 
 					<button id="btn-bars" class="" type="button"><i class="fas fa-bars"></i></button>
 					<button id="btn-search" class="" type="button"><i class="fas fa-search"></i></button>
@@ -75,8 +76,8 @@
 				<div class="row">
 					<nav>
 						<ul id="menu" class="pull-right">
-							<li><a href="index.html">Home</a></li>
-							<li><a href="videos.html">Vídeos</a></li>
+							<li><a href="/">Home</a></li>
+							<li><a href="videos">Vídeos</a></li>
 							<li><a href="">Tickets</a></li>
 							<li><a href="">TNews</a></li>
 							<li><a href="">TSchedule</a></li>
