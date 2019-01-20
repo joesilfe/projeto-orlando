@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html ng-app="shop">
 	<head>
 		<meta charset="utf-8">
 		<meta name="author" content="Joel Silva">
@@ -8,10 +8,11 @@
 		<link rel="stylesheet" type="text/css" href="lib/bootstrap-3.3.7/css/bootstrap.min.css">		
 		<link rel="stylesheet" tyle="text/css" href="lib/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
 		<link rel="stylesheet" tyle="text/css" href="lib/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
-		<link rel="stylesheet" type="text/css" href="lib/raty/lib/jquery.raty.css"">
+		<link rel="stylesheet" type="text/css" href="lib/raty/lib/jquery.raty.css">
 		<link rel="stylesheet" type="text/css" href="css/orlando.css">
 		<link rel="stylesheet" type="text/css" href="css/orlando-mobile.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+		<script type="text/javascript" src="lib/angular2/angular.min.js"></script>
 	</head>
 	<body>
 		<header class="open-menu">
