@@ -3,9 +3,9 @@
 <link rel="stylesheet" tyle="text/css" href="lib/OwlCarousel/dist/assets/owl.theme.default.min.css">
 
 
-	<section>
+	<section ng-controller="destaque-controller">
 	
-		<div class="container" id="destaque-produtos-container" ng-controller="destaque-controller">
+		<div class="container" id="destaque-produtos-container">
 
 			<div id="destaque-produtos" class="owl-carousel2 owl-theme2">
 					
@@ -98,61 +98,15 @@
 
 			<div class="row">
 				
-				<div class="col-md-3">
-					
-					<div class="box-produto-info">
+				<div class="col-md-3" ng-repeat="produto in buscados">					
+					<div class="box-produto-info" >
 						<a href="#">
-							<img src="img/produtos/panelas.png" alt="Panelas" class="produto-img">
-							<h3>Conjunto de Panelas Tramontina Versalhes Aluminio Antiaderente 5</h3>
-							<div class="estrelas" data-score="3"></div>
-							<div class="text-qtd-reviews text-arial-cinza">(300)</div>
-							<div class="text-valor text-roxo">R$ 109,90</div>
-							<div class="text-parcelado text-arial-cinza">10x de R$ 10,99 sem juros</div>
-						</a>
-					</div>
-
-				</div>
-
-				<div class="col-md-3">
-					
-					<div class="box-produto-info">
-						<a href="#">
-							<img src="img/produtos/panelas.png" alt="Panelas" class="produto-img">
-							<h3>Conjunto de Panelas Tramontina Versalhes Aluminio Antiaderente 5</h3>
-							<div class="estrelas" data-score="5"></div>
-							<div class="text-qtd-reviews text-arial-cinza">(300)</div>
-							<div class="text-valor text-roxo">R$ 109,90</div>
-							<div class="text-parcelado text-arial-cinza">10x de R$ 10,99 sem juros</div>
-						</a>
-					</div>
-
-				</div>
-
-				<div class="col-md-3">
-					
-					<div class="box-produto-info">
-						<a href="#">
-							<img src="img/produtos/panelas.png" alt="Panelas" class="produto-img">
-							<h3>Conjunto de Panelas Tramontina Versalhes Aluminio Antiaderente 5</h3>
-							<div class="estrelas" data-score="2.5"></div>
-							<div class="text-qtd-reviews text-arial-cinza">(300)</div>
-							<div class="text-valor text-roxo">R$ 109,90</div>
-							<div class="text-parcelado text-arial-cinza">10x de R$ 10,99 sem juros</div>
-						</a>
-					</div>
-
-				</div>
-
-				<div class="col-md-3">
-					
-					<div class="box-produto-info">
-						<a href="#">
-							<img src="img/produtos/panelas.png" alt="Panelas" class="produto-img">
-							<h3>Conjunto de Panelas Tramontina Versalhes Aluminio Antiaderente 5</h3>
-							<div class="estrelas" data-score="1"></div>
-							<div class="text-qtd-reviews text-arial-cinza">(300)</div>
-							<div class="text-valor text-roxo">R$ 109,90</div>
-							<div class="text-parcelado text-arial-cinza">10x de R$ 10,99 sem juros</div>
+							<img src="img/produtos/{{produto.foto_principal}}" alt="{{produto.nome_prod_longo}}" class="produto-img">
+							<h3>{{produto.nome_prod_longo}}</h3>
+							<div class="estrelas" data-score="{{produto.media}}"></div>
+							<div class="text-qtd-reviews text-arial-cinza">({{produto.total_reviews}})</div>
+							<div class="text-valor text-roxo">R$ {{produto.total}}</div>
+							<div class="text-parcelado text-arial-cinza">{{produto.parcelas}}x de R$ {{produto.parcela}} sem juros</div>
 						</a>
 					</div>
 
@@ -171,6 +125,7 @@
 	angular.module("shop", []).controller("destaque-controller", function($scope, $http){
 		
 		$scope.produtos = [];
+		$scope.buscados = [];
 
 		var initCarousel = function(){
 			//Configurando o Carrousel OWL 1.3
@@ -197,6 +152,7 @@
 			method: 'GET',
 			url: 'produtos',
 		}).then(function successCallback(response){
+
 			$scope.produtos = response.data;
 
 			//função que para o java script para continuar executando
@@ -206,6 +162,33 @@
 
 		});
 
+		var initEstrelas = function(){
+			//raty
+		    $(".estrelas").each(function(){
+		    	$(this).raty({
+			    	starHalf:    'lib/raty/lib/images/star-half.png',
+					starOff :    'lib/raty/lib/images/star-off.png',
+					starOn  :    'lib/raty/lib/images/star-on.png',
+					score 	: 	 parseFloat($(this).data("score")),
+			    });
+		    });
+		};
+
+		$http({
+			method: 'GET',
+			url: 'produtos-mais-buscados',
+		}).then(function successCallback(response){
+
+			$scope.buscados = response.data;
+
+			//função que para o java script para continuar executando
+			setTimeout(initEstrelas, 1);
+
+		}, function errorCallback(response){
+
+		});
+
+		//valores fixos
 		// $scope.produtos.push({
 		// 	nome_prod_longo:"Smartphone Motorola Moto X Play Dual Chip Desbloqueado Andoid 5.1",
 		// 	foto_principal:"moto-x.png",
@@ -228,14 +211,4 @@
 	
 
 	});	
-
-    //raty
-    $(".estrelas").each(function(){
-    	$(this).raty({
-	    	starHalf:    'lib/raty/lib/images/star-half.png',
-			starOff :    'lib/raty/lib/images/star-off.png',
-			starOn  :    'lib/raty/lib/images/star-on.png',
-			score 	: 	 parseFloat($(this).data("score")),
-	    });
-    });
 </script>
