@@ -25,7 +25,7 @@
 						<button type="button" class="btn btn-close"><i class="fas fa-chevron-left"></i></button>
 					</div>
 					<ul class="list-unstyled">
-						<li><a href="/">Home</a></li>
+						<li><a href="home">Home</a></li>
 						<li><a href="videos">Vídeos</a></li>
 						<li><a href="">Tickets</a></li>
 						<li><a href="">TNews</a></li>
@@ -77,7 +77,7 @@
 				<div class="row">
 					<nav>
 						<ul id="menu" class="pull-right">
-							<li><a href="/">Home</a></li>
+							<li><a href="home">Home</a></li>
 							<li><a href="videos">Vídeos</a></li>
 							<li><a href="">Tickets</a></li>
 							<li><a href="">TNews</a></li>

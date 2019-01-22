@@ -8,7 +8,7 @@
 
 	// //mysqli_fetch_array($var); : Como todo select retorna várias linhas, o código 'mysqli_fetch_array($var)' armazena em um array.
 	// while($row = mysqli_fetch_array($result)){
-	// 	//var_dump() : Este método informa as informações e o tipo de dado (String, int, flout)
+	// 	//var_dump() : Este método informa as informações e o tipo de dado (String, int, float)
 	// 	var_dump($row);
 	
 	// }

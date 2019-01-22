@@ -8,6 +8,7 @@
  * If you are using Composer, you can skip this step.
  */
 require 'inc/Slim-2.x/Slim/Slim.php';
+require_once 'inc/configuration.php';
 
 \Slim\Slim::registerAutoloader();
 
@@ -32,7 +33,7 @@ $app = new \Slim\Slim();
 
 // GET route
 $app->get(
-    '/',
+    '/home',
     function () {
         //require_once : redirecione para "view/index.php"
         require_once("view/index.php");
@@ -52,6 +53,16 @@ $app->get(
         require_once("view/shop.php");
     }
 );
+
+$app->get('/produtos', function(){
+
+    $sql = new Sql();
+
+    $data = $sql->select("SELECT * FROM tb_produtos WHERE preco_promorcional > 0 order by preco_promorcional desc limit 3;");
+
+    echo json_encode($data);
+
+});
 
 // POST route
 $app->post(
