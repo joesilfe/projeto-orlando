@@ -148,11 +148,14 @@ header #logotipo{
 }
 
 #menu li.search input{
-	background-color:#5c2d90 ;
-	color:#fff;
-	border: none;
-	height: 30px;
-	line-height: 30px;
+	background-color: #5c2d90;
+    color: #fff;
+    border: none;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50px;
+    padding-left: 11px;
+    outline: none;
 }
 
 #menu li.search.ativo input{
@@ -552,8 +555,12 @@ video{
 }
 
 #destaque-produtos .col-descricao .btn-comprar{
-	font-size: 26px;
-	padding: 10px 0;
+    background-color: #55b342;
+    margin-top: 27px;
+    font-size: 26px;
+    color: #fff;
+    padding: 10px 20px;
+    box-shadow: none;
 }
 
 #destaque-produtos .col-descricao .btn-comprar .fa{
