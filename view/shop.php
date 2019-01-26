@@ -28,7 +28,7 @@
 							<div class="text-total text-arial-cinza">total a prazo R$ {{produto.total}}</div>							
 						</div>
 
-						<a href="#" class="btn btn-comprar text-roxo"><i class="fas fa-shopping-cart"></i> compre agora</a>
+						<a href="produto-{{produto.id_prod}}" class="btn btn-comprar text-roxo"><i class="fas fa-shopping-cart"></i> compre agora</a>
 					</div>		
 
 				</div>
@@ -184,7 +184,7 @@
 			$scope.buscados = response.data;
 
 			//função que para o java script para continuar executando
-			setTimeout(initEstrelas, 1);
+			setTimeout(initEstrelas, 1000);
 
 		}, function errorCallback(response){
 

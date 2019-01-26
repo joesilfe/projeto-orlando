@@ -23,7 +23,7 @@
 							<div class="text-total text-arial-cinza">total a prazo R$ <?=$produto['total']?></div>							
 						</div>
 
-						<a href="#" class="btn btn-comprar text-roxo"><i class="fas fa-shopping-cart"></i> compre agora</a>
+						<a href="carrinhoAdd-<?=$produto['id_prod']?>" class="btn btn-comprar text-roxo"><i class="fas fa-shopping-cart"></i> compre agora</a>
 					</div>		
 
 				</div>
